@@ -1,0 +1,508 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+		  <div class="slides">
+            <!-- Slide #1 -->
+			<section>
+              <h3 style="text-align: center;">Moving Your Company To Groovy</h3>
+              <p><span style="font-weight: bold;">Who Am I:</span> David Clark</p>
+              <p><span style="font-weight: bold;">Where I Work:</span>
+                <a href="https://www.researchnow.com/">Research Now</a> <i>Principal Engineer</i> </p>
+              <p><span style="font-weight: bold;">Where Do I Code:</span>
+                <a href="https://github.com/dwclark">https://github.com/dwclark</a></p>
+              <p><span style="font-weight: bold;">My Project:</span> <a href="https://github.com/http-builder-ng/http-builder-ng">Http Builder NG</a></p>
+            </section>
+
+            <!-- Slide #2 -->
+			<section>
+              <h3 style="text-align: center;">Moving Your Company To Groovy</h3>
+              <h3 style="text-align: center;">(or any new technology)</h3>
+              <h3 style="text-align: center;">In 6 Examples and 12 Easy Steps</h3>
+              <em>Money Back Guarantee*</em>
+              
+              <p style="font-size: 40%;">* Subject to terms and conditions. Common side effects of moving to Groovy include but are not
+                limited to: increased velocity, better code, fast/flexible builds, hatred of Scala, impatience
+                with Java, psoriasis, pregnancy, hot flashes, delusions of grandeur, dynamic code reloading,
+                diabetes, ast transformations, dizziness, redness, headache, and dry mouth. Always consult your
+                doctor, counselor, minister, priest, rabbi, or the nearest cetacean biologist before moving to Groovy
+                or any other new technology.
+              </p>
+            </section>
+
+            <!-- Fat Bastard -->
+            <section>
+              <div style="vertical-align:middle; text-align:center">
+                <img src="https://i.ytimg.com/vi/hgfbafx137A/maxresdefault.jpg"/>
+              </div>
+            </section>
+
+            <!-- Situation #1 -->
+            <section>
+              <h3 style="text-align: center;">#1: Java Was Too Fat</h3>
+              <ul style="font-size: 70%">
+                <li>The year is 2007, and fat Java web frameworks ruled the land. People had just started talking
+                  about Ajax (remember that?).</li>
+                <li>3+ year investment In Java, which was itself a re-write of code written in 2001 (ported from classic ASP/VB).</li>
+                <li>This was my first large Java project but I had hit a wall, I was spending all of my time fixing bugs
+                  and very little time developing new features.
+                </li>
+                <li>I tried a few of cool frameworks at the time but found they didn't help much, they mainly just required
+                  that I write different kinds of boilerplate code.</li>
+              </ul>
+            </section>
+
+            <!-- After Diet -->
+            <section>
+              <div style="vertical-align:middle; text-align:center">
+                <img src="images/diet.jpg" height="50%" width="50%"/>
+              </div>
+            </section>
+
+            <!-- Solution #1 -->
+            <section>
+              <h3 style="text-align: center;">#1: Go On A Groovy Diet</h3>
+              <ul style="font-size: 70%">
+                <li>The main problem was Java. String handling sucked, RegEx support was complicated,
+                  type information made it hard to evolve the code, testing in Java was painful, ClassCastExceptions
+                  were common, verbose code etc.
+                <li>Switching to Groovy gave me instant relief to all of these problems because I was able to evolve my code
+                  piecemeal...and this was before joint compilation</li>
+                <li>Every time a refactored from Java -> Groovy code size would decrease a factor of between two and five</li>
+                <li>This was the peak of Rails hype, but before Grails hit 1.0. I was tempted to jump to Rails, but
+                  knew that it would be a complete re-write that would take 6 months...and I didn't have 6 months to spare</li>
+                <li>Got back on track. Would develop for several more years and left when it became clear that
+                  there wasn't anything left to do</li>
+              </ul>
+            </section>
+
+            <!-- Baby eating lime -->
+            <section>
+              <div style="vertical-align:middle; text-align:center">
+                <img src="https://i.ytimg.com/vi/TxvW4WMzcrA/maxresdefault.jpg"/>
+              </div>
+            </section>
+
+            <!-- Situation #2 -->
+            <section>
+              <h3 style="text-align: center;">#2: Groovy Left a Bad Taste</h3>
+              <ul style="font-size: 70%">
+                <li>Groovy dynamicity was abused, hurt by static type checking</li>
+                <li>People unwisely using Groovy features, such as closures, just because they could</li>
+                <li>Hard time upgrading off of Grails 1.x</li>
+                <li>Bad performance, though at this company nothing is ever performant enough</li>
+              </ul>
+            </section>
+
+            <!-- Mojito -->
+            <section>
+              <div style="vertical-align:middle; text-align:center">
+                <img src="http://kingofwallpapers.com/mojito/mojito-001.jpg"/>
+              </div>
+            </section>
+
+            <!-- Solution #2 -->
+            <section>
+              <h3 style="text-align: center;">#2: Add Some Groovy Sugar and Rum</h3>
+              <ul style="font-size: 70%">
+                <li>Every system performs well in different ways, optimize the right thing</li>
+                <li>Big data project that had to churn through terabytes of data in under 5 seconds</li>
+                <li>Data stored in a columnar store that was highly dependent on submitting the correct
+                  queries, select * from x was NEVER the right answer</li>
+                <li>The queries were highly dynamic and had to be customized for each installation</li>
+                <li>Make a Groovy DSL, spend a few more microseconds generating the queries, then
+                  save several minutes in server side processing</li>
+              </ul>
+            </section>
+
+
+            <!-- Kid lifting weight -->
+            <section>
+              <div style="vertical-align:middle; text-align:center">
+                <img src="http://a57.foxnews.com/images.foxnews.com/content/fox-news/health/2013/10/04/should-kids-be-lifting-weights/_jcr_content/par/featured-media/media-1.img.jpg/876/493/1422641140676.jpg?ve=1&tl=1"/>
+              </div>
+            </section>
+
+            <section>
+              <h3 style="text-align: center;">#3: We Need a Little More Power</h3>
+              <ul style="font-size: 70%">
+                <li>System supported 4 out of 24 possible network decoders</li>
+                <li>No JVM library supported all 24 decoders</li>
+                <li>Most didn't support full decodes, they were ad-hoc and partial</li>
+                <li>Speed was a constant issue. Flexibility always led to slower code</li>
+              </ul>
+            </section>
+            
+            <!-- Eddie Hall lift -->
+            <section>
+              <div style="vertical-align:middle; text-align:center">
+                <img src="http://d1m4d2e972o4sj.cloudfront.net/photo/578155ff3aebf.jpeg?width=1400"/>
+              </div>
+            </section>
+
+            <section>
+              <h3 style="text-align: center;">#3: Let Groovy do the Heavy Lifting</h3>
+              <ul style="font-size: 70%">
+                <li>Groovy can perform well, sometimes even better than Java</li>
+                <li>I offered to implement all 24 decoders, support all fields,
+                  provide a flexible plugin system to support all extension, and have it
+                  perform better than all previous JVM based decoders, and to do it a couple of months</li>
+                <li>We delivered on all counts</li>
+                <li>Because Groovy</li>
+                <li>@CompileStatic + AST Transformations allowed us to implement a compile time
+                  DSL. Implementing the decoders was literally copying the spec out of pdf's and
+                  massaging them a little inside Groovy files</li>
+                <li>Compile Time DSL also allowed custom code to be added at compile time, lazy and eager
+                  loading together, and accessing of data as Maps or static properties.</li>
+              </ul>
+            </section>
+
+            <!-- Bad Cables -->
+            <section>
+              <div style="vertical-align:middle; text-align:center">
+                <img src="http://www.globalnerdy.com/wordpress/wp-content/uploads/2009/02/server-room-with-salt.jpg"/>
+              </div>
+            </section>
+
+            <section>
+              <h3 style="text-align: center;">#4: The Scripts are a Little Tangled</h3>
+              <ul style="font-size: 70%">
+                <li>Extremely brittle deployments, especially in DB changes.</li>
+                <li>On deploy day people brought their PL/SQL scripts, threw them in a pile, and expected the DBAs to sort them out</li>
+                <li>Script runs were sequence dependent</li>
+                <li>Needed different scripts to run in different environments</li>
+                <li>Oh yeah, solution better just be plain PL/SQL scripts to DBAs can examine them</li>
+              </ul>
+            </section>
+
+            <!-- Good Cables -->
+            <section>
+              <div style="vertical-align:middle; text-align:center">
+                <img src="https://regmedia.co.uk/2015/06/24/structured_cabling.jpg"/>
+              </div>
+            </section>
+
+            <section>
+              <h3 style="text-align: center;">#4: Gradle: The Detangler</h3>
+              <ul style="font-size: 70%">
+                <li>Ordering dependencies should always suggest a build tool, that's what they are good at</li>
+                <li>Solution: Custom gradle plugin written in Groovy</li>
+                <li>Built custom deployer on top of Gradle application plugin and using Flyway</li>
+                <li>DBAs still don't know what the guts are made of because they just see
+                  a zip file that contains a bat file and some PL/SQL scripts</li>
+                <li>It contains other stuff too, but I don't point that out</li>
+              </ul>
+            </section>
+
+            <!-- Funny Car Crashes -->
+            <section>
+              <div style="vertical-align:middle; text-align:center">
+                <img src="https://www.askideas.com/media/35/Cars-Funny-Crash-Image.jpg"/>
+              </div>
+            </section>
+
+            <section>
+              <h3 style="text-align: center;">#5: The Critical App Crashes</h3>
+              <ul style="font-size: 70%">
+                <li>Extremely mission critical app crashes for long periods of time</li>
+                <li>Simple re-boots are risky and in general do not help because the app
+                  is processing data real time, it just goes back to crashing</li>
+                <li>Written in Java with lots of custom Neo4j extensions</li>
+                <li>When it is working correctly it takes around 0.5 seconds
+                  to match a person to a survey, under bad conditions up to 5 seconds.</li>
+              </ul>
+            </section>
+
+            <!-- Bugatti -->
+            <section>
+              <div style="vertical-align:middle; text-align:center">
+                <img src="http://assets.bugatti.com/fileadmin/chiron_stage_01.jpg"/>
+              </div>
+            </section>
+
+            <section>
+              <h3 style="text-align: center;">#5: Groovy Flavored Bugatti</h3>
+              <ul style="font-size: 70%">
+                <li>Realize that Neo4j was the incorrect choice for this project
+                  and that it was mainly being used to analyze complex expressions</li>
+                <li>Implement custom expression DSL and an efficient
+                  in memory representation of the data both in Groovy</li>
+                <li>Optimize access access to the data using, you guessed it,
+                  a data access layer in Groovy.</li>
+                <li>Completely replace system. Response times drop to 20 ms. Can exhaustively
+                  match a person to all available surveys in less than 1 ms.</li>
+              </ul>
+            </section>
+
+            <!-- Immutable Hercules -->
+            <section>
+              <div style="vertical-align:middle; text-align:center">
+                <img src="https://s-media-cache-ak0.pinimg.com/564x/b5/f6/ac/b5f6acc0b5e0b4776f7ab3ec513f4ece.jpg"/>
+              </div>
+            </section>
+            
+            <section>
+              <h3 style="text-align: center;">#6: Immutably Slow</h3>
+              <ul style="font-size: 70%">
+                <li>Application that computes person's data points is very critical</li>
+                <li>Written in Scala so computational algorithm starts out immutable</li>
+                <li>Eventually part of the code is written in a mutable style either for
+                  efficiency or because it was the only way people could get it done</li>
+                <li>Computes state in around 10 ms per person. While that sounds fast,
+                  how long to compute state for 6.5 million + people?</li>
+                <li>Real problem is the amount of garbage generated under heavy load
+                  leading to lots of time spent in GC and unbelievably frequent and long
+                  GC pauses.</li>
+              </ul>
+            </section>
+            
+            <!-- Usain Bolt -->
+            <section>
+              <div style="vertical-align:middle; text-align:center">
+                <img src="https://2.bp.blogspot.com/-ydbyADIK-fY/V7TuEqP7XPI/AAAAAAAAUI4/RPY-LySq-FsJ2yiLrWCo1b7ZZ_T3nKsVQCLcB/s1600/Usain%2BBolt%252BCheeky%2BSmile%252B100%2BMeter%252BSmile%252BOlympics%252BRio%252B2016%252BEmotional%2BIntelligence%252BBody%2BLanguage%252BBody%2BLanguage%2BExpert%252BNonverbal%2BCommunication%2BExpert%252BSpeaker%252BKeynote%252BConsultant%252BLos%2BAngeles%252BLas%2BVegas%252BNYC%252BCalifornia%252BFlorida%252B2.png"/>
+              </div>
+            </section>
+
+            <!-- Groovier Immutability -->
+            <section>
+              <h3 style="text-align: center;">#6: Groovier Immutablity</h3>
+              <ul style="font-size: 70%">
+                <li>I want to be clear: Immutability is usually a clear win, I use
+                  <em>final</em> more than anyone I know</li>
+                <li>You will eventually have to mutate state, plan for this up
+                  front and do it intelligently</li>
+                <li>Solution: Yep, re-write in Groovy</li>
+                <li>New solution is probably <em>more</em> immutable than the previous solution,
+                  but we mutate when speed counts, which is accessing a very efficient primitives based Map</li>
+                <li>We changed the original tree based algorithm to a DAG based algorithm</li>
+                <li>Computes state in around 0.2 ms per person and generates ZERO garbage</li>
+                <li>Bonus: Found several long standing and unknown bugs because we expressed
+                  the solution in the cleanest and most natural way</li>
+              </ul>
+            </section>
+
+            <!-- Why Groovy? -->
+            <section>
+              <h2 style="text-align: center;">Why Groovy?</h2>
+              <h4 style="text-align: center;">It allows you to express the solution to
+                your problem in the most natural manner possible because it gives
+                you all the tools you need to do this
+              </h4>
+            </section>
+
+            <section>
+              <h3 style="text-align: center;">What Tools Do I Need?</h3>
+              <ul style="font-size: 70%">
+                <li>Static AND Dynamic Typing</li>
+                <li>Runtime AND Compile Time Metaprogramming</li>
+                <li>OO AND Functional Programming (Mutable AND Immutable)</li>
+                <li>Objects AND Primitives</li>
+                <li>Low Level AND High Level Coding Styles</li>
+                <li>Run as Script, Dynamic Code Evaluation, OR Static Build</li>
+                <li>Operator Overloading</li>
+                <li>Language Extensibility</li>
+                <li>Ability to mix any or all of the above</li>
+                <li>Seamless integration with Java and the JVM</li>
+                <li>As far as I know, only Groovy fits the bill</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 style="text-align: center;">So What Works?</h2>
+            </section>
+            
+            <section>
+              <h2 style="text-align: center;">Understand the Problem</h2>
+            </section>
+
+            <section>
+              <ul style="font-size: 70%">
+                <li>Be as specific as possible in understanding the problem</li>
+                <li>Take as much time as you need for this step. Think a lot and
+                  engage in HDD, Hammock Driven Development. Get philosophical
+                  and computer sciencey</li>
+                <li><b>Bad Example:</b> We have too much unreadable code</li>
+                <li><b>Good Example:</b> We have too much unreadable code because we have
+                  implemented an ad-hoc interpreter for our configuration system.
+                  We need the ability to compile and execute code at runtime using
+                  a real language.</li>
+                <li><b>Bad Example:</b> We have too much unreadable code</li>
+                <li><b>Good Example:</b> Our code is unreadable because we have no unified
+                  and compact way of specifying the business logic. We need to pull
+                  the logic together into a DSL that clearly expresses what the business
+                  does, ideally in a single file. Even better if we can use that
+                  single file to produce a visual representation of business logic.</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 style="text-align: center;">Pitch It</h2>
+            </section>
+            
+            <section>
+              Now that you have identified the problem, it's time to match the tool you
+              want to use to the identified problem. This rarely is going to be a formal pitch,
+              I've only done that a single time. It the problem you are solving is real, causes pain,
+              slows things down, and/or costs money people are usually pretty reasonable
+              about possible solutions.
+            </section>
+
+            <section>
+              <h2 style="text-align: center;">History</h2>
+            </section>
+
+            <section>
+              <ul style="font-size: 70%">
+                <li>No organization is a blank slate. Knowing how you got here helps
+                  you to tailor the pitch and avoid re-treading the same ground</li>
+                <li>The quickest way to get shot down is when your boss
+                  says <em>We already tried that</em>. There usually isn't a way to come
+                  back from that unless you can show <em>No we didn't try that</em>.
+                <li>Talk to people and listen to their war stories in the org. It builds
+                  camraderie, shows you care, and gives you valuable insights into history</li>
+                <li>Source code control systems are a valuable source of history</li>
+                <li>Don't just talk to developers. Also talk to managers (they were often developers),
+                  production control/dev ops, QA engineers, DBAs, and anyone else who knows something.</li>
+                <li>A huge part of therapy is empathy</li>
+              </ul>
+            </section>
+            
+            <section>
+              <h2 style="text-align: center;">Culture</h2>
+            </section>
+
+            <section>
+              <ul style="font-size: 70%">
+                <li>Every organization has a unique culture, since you are already
+                  talking to everyone, you should have a good feel for the culture</li>
+                <li>The best attempts at change will match the organizations strenths
+                  and weaknesses</li>
+                <li><b>Cost Sensitive:</b> Your proposed change should emphasize
+                  how this change cuts costs</li>
+                <li><b>Blame Culture:</b> Assume the blame for what happens
+                  next with the tool you are proposing</li>
+                <li><b>Risk Averse:</b> Emphasize that this is the least risky option</li>
+                <li><b><em>IMPORTANT</em></b>, I am not suggesting you lie or manipulate.
+                  There are lots of ways to tell a story, lots of ways to sell something.
+                  You need to speak the language of the culture you are in. You don't sell
+                  minivans to moms on top speed and you don't sell Ferraris to rich
+                  young punks on safety features</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 style="text-align: center;">Honesty</h2>
+            </section>
+
+            <section>
+              <ul style="font-size: 70%">
+                <li>Be honest to yourself, you have to live with this decision and
+                  see it through to the end. Are you ready?</li>
+                <li>Your IDE may permanently or temporarily break with your new
+                  language, can you live with that?</li>
+                <li>Are you prepared for the learning curve or have you already
+                  traveled far enough up the curve that you are confident it won't be a problem?</li>
+                <li>This may be harder to debug, but you will debug less, can you live with that?</li>
+                <li>This will be easier to test, but will you actually test more?</li>
+                <li>What happens if this fails? Are you prepared for this? Do you
+                  have a contingency plan?</li>
+                <li>Have you identified the problem and does this solve it?</li>
+              </ul>
+            </section>
+            
+            <section>
+              <h2 style="text-align: center;">This Isn't Playtime</h2>
+            </section>
+            
+            <section>
+              If your boss thinks that you are just exploring stuff willy-nilly or
+              are engaged in RDD, Resume Driven Development, you will lose or your
+              new approach will be cut short.
+            </section>
+
+            <section>
+              <h2 style="text-align: center;">Persistence</h2>
+            </section>
+
+            <section>
+              <h2 style="text-align: center;">Play to the JVM</h2>
+            </section>
+
+            <section>
+              <h2 style="text-align: center;">Low Risk == Low Rewards</h2>
+            </section>
+
+            <section>
+              <h2 style="text-align: center;">Confidence</h2>
+            </section>
+
+            <section>
+              <h2 style="text-align: center;">Have Fun</h2>
+            </section>
+
+            <section>
+              <h2 style="text-align: center;">It's Up To You!</h2>
+            </section>
+
+
+            <!-- Image Credits -->
+            <section>
+              <ul>
+                <li><a href="https://i.ytimg.com/vi/hgfbafx137A/maxresdefault.jpg">Fat Bastard</a></li>
+                <li><a href="http://www.publicdomainpictures.net/view-image.php?image=202506&picture=woman-in-pants-after-diet">Woman After Diet</a></li>
+                <li><a href="https://i.ytimg.com/vi/TxvW4WMzcrA/maxresdefault.jpg">Baby Eating Lime</a></li>
+                <li><a href="http://kingofwallpapers.com/mojito/mojito-001.jpg">Mojito</a></li>
+                <li><a href="http://www.foxnews.com/health/2013/10/04/should-kids-be-lifting-weights.html>Kid Lifting Weights</a></li>
+                <li><a href="http://www.floelite.com/article/43442-eddie-hall-deadlifts-500kg-for-a-new-world-record#.WOFiQd_6ykB">Eddie Hall Deadlift</a></li>
+                <li><a href="http://www.globalnerdy.com/wordpress/wp-content/uploads/2009/02/server-room-with-salt.jpg">Bad Cables</a></li>
+                <li><a href="https://www.theregister.co.uk/2015/06/24/10_tips_for_avoiding_data_centre_mistakes/">Data Centre Mistakes</a></li>
+                <li><a href="https://www.askideas.com/25-most-funniest-car-crash-pictures-that-will-make-you-laugh/">Funny Car Crashes</li>
+                <li><a href="http://www.bugatti.com/home/">Bugatti</a></li>
+                <li><a href="https://www.pinterest.com/leannrafferty/broken-statues/">Bust of Hercules</a></li>
+                <li><a href="http://www.bodylanguagesuccess.com/2016/08/nonverbal-communication-analysis-no_17.html">Usain Bolt</a></li>
+              </ul>
+            </section>
+              
+          </div>
+		</div>
+        
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
