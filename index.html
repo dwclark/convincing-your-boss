@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Convincing Your Boss</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/white.css">
@@ -69,7 +69,7 @@
                 <li>This was my first large Java project but I had hit a wall, I was spending all of my time fixing bugs
                   and very little time developing new features.
                 </li>
-                <li>I tried a few of cool frameworks at the time but found they didn't help much, they mainly just required
+                <li>I tried a few of the cool frameworks at the time but found they didn't help much, they mainly just required
                   that I write different kinds of boilerplate code.</li>
               </ul>
             </section>
@@ -90,7 +90,7 @@
                   were common, verbose code etc.
                 <li>Switching to Groovy gave me instant relief to all of these problems because I was able to evolve my code
                   piecemeal...and this was before joint compilation</li>
-                <li>Every time a refactored from Java -> Groovy code size would decrease a factor of between two and five</li>
+                <li>Every time I refactored from Java -> Groovy code size would decrease a factor of between two and five</li>
                 <li>This was the peak of Rails hype, but before Grails hit 1.0. I was tempted to jump to Rails, but
                   knew that it would be a complete re-write that would take 6 months...and I didn't have 6 months to spare</li>
                 <li>Got back on track. Would develop for several more years and left when it became clear that
@@ -127,10 +127,10 @@
             <section>
               <h3 style="text-align: center;">#2: Add Some Groovy Sugar and Rum</h3>
               <ul style="font-size: 70%">
-                <li>Every system performs well in different ways, optimize the right thing</li>
+                <li>Every system performs well in different ways: optimize the right thing</li>
                 <li>Big data project that had to churn through terabytes of data in under 5 seconds</li>
                 <li>Data stored in a columnar store that was highly dependent on submitting the correct
-                  queries, select * from x was NEVER the right answer</li>
+                  queries, select * from x; was NEVER the right answer</li>
                 <li>The queries were highly dynamic and had to be customized for each installation</li>
                 <li>Make a Groovy DSL, spend a few more microseconds generating the queries, then
                   save several minutes in server side processing</li>
@@ -167,15 +167,15 @@
               <ul style="font-size: 70%">
                 <li>Groovy can perform well, sometimes even better than Java</li>
                 <li>I offered to implement all 24 decoders, support all fields,
-                  provide a flexible plugin system to support all extension, and have it
+                  provide a flexible plugin system to support all extensions, have it
                   perform better than all previous JVM based decoders, and to do it a couple of months</li>
-                <li>We delivered on all counts</li>
+                <li>We delivered on all counts.</li>
                 <li>Because Groovy</li>
                 <li>@CompileStatic + AST Transformations allowed us to implement a compile time
-                  DSL. Implementing the decoders was literally copying the spec out of pdf's and
+                  DSL. Implementing the decoders was literally copying the spec out of pdf files and
                   massaging them a little inside Groovy files</li>
-                <li>Compile Time DSL also allowed custom code to be added at compile time, lazy and eager
-                  loading together, and accessing of data as Maps or static properties.</li>
+                <li>Compile Time DSL also allowed custom code to be added at compile time, lazy or eager
+                  decoding with no additional code, and accessing of data as Maps or properties.</li>
               </ul>
             </section>
 
@@ -193,7 +193,7 @@
                 <li>On deploy day people brought their PL/SQL scripts, threw them in a pile, and expected the DBAs to sort them out</li>
                 <li>Script runs were sequence dependent</li>
                 <li>Needed different scripts to run in different environments</li>
-                <li>Oh yeah, solution better just be plain PL/SQL scripts to DBAs can examine them</li>
+                <li>Oh yeah, solution better just be plain PL/SQL scripts so DBAs can examine them</li>
               </ul>
             </section>
 
@@ -207,12 +207,12 @@
             <section>
               <h3 style="text-align: center;">#4: Gradle: The Detangler</h3>
               <ul style="font-size: 70%">
-                <li>Ordering dependencies should always suggest a build tool, that's what they are good at</li>
+                <li>Ordering dependencies should always suggest a build tool, that's what they are good at.</li>
                 <li>Solution: Custom gradle plugin written in Groovy</li>
                 <li>Built custom deployer on top of Gradle application plugin and using Flyway</li>
                 <li>DBAs still don't know what the guts are made of because they just see
-                  a zip file that contains a bat file and some PL/SQL scripts</li>
-                <li>It contains other stuff too, but I don't point that out</li>
+                  a zip file that contains a bat file and some PL/SQL scripts.</li>
+                <li>It contains other stuff too, but I don't point that out.</li>
               </ul>
             </section>
 
@@ -228,10 +228,11 @@
               <ul style="font-size: 70%">
                 <li>Extremely mission critical app crashes for long periods of time</li>
                 <li>Simple re-boots are risky and in general do not help because the app
-                  is processing data real time, it just goes back to crashing</li>
+                  is processing data real time, it just goes back to crashing.</li>
                 <li>Written in Java with lots of custom Neo4j extensions</li>
-                <li>When it is working correctly it takes around 0.5 seconds
-                  to match a person to a survey, under bad conditions up to 5 seconds.</li>
+                <li>When it was working correctly it took around 0.5 seconds
+                  to match a person to a survey, under bad conditions up to 5 seconds,
+                  under really bad conditions it would never return.</li>
               </ul>
             </section>
 
@@ -248,9 +249,8 @@
                 <li>Realize that Neo4j was the incorrect choice for this project
                   and that it was mainly being used to analyze complex expressions</li>
                 <li>Implement custom expression DSL and an efficient
-                  in memory representation of the data both in Groovy</li>
-                <li>Optimize access access to the data using, you guessed it,
-                  a data access layer in Groovy.</li>
+                  in memory representation of the data, both in Groovy</li>
+                <li>Optimized datat access access layer written in Groovy (Duh!).</li>
                 <li>Completely replace system. Response times drop to 20 ms. Can exhaustively
                   match a person to all available surveys in less than 1 ms.</li>
               </ul>
@@ -364,7 +364,7 @@
             <section>
               Now that you have identified the problem, it's time to match the tool you
               want to use to the identified problem. This rarely is going to be a formal pitch,
-              I've only done that a single time. It the problem you are solving is real, causes pain,
+              I've only done that a single time. If the problem you are solving is real, causes pain,
               slows things down, and/or costs money people are usually pretty reasonable
               about possible solutions.
             </section>
@@ -461,10 +461,10 @@
             <section>
               <ul style="font-size: 70%">
                 <li>The risk of implementing something in an alternative JVM
-                  language is really quite small; Groovy, Scala, and Clojure
+                  language is really quite small; Groovy, Scala, Kotlin, and Clojure
                   all have exit paths</li>
                 <li>Are you already using one of these languages as a library
-                  and don't even realize it. Running "gradle dependencies" might
+                  and don't even realize it? Running "gradle dependencies" might
                   be surprising</li>
               </ul>
             </section>
