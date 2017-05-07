@@ -1,4 +1,4 @@
-# Convincing Your Company To Groovy (Or Any New Technology)
+# Convincing Your Company To Move To Groovy (Or Any New Technology)
 
 Viewing the presentation should be simple:
 
